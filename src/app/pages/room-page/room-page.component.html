@@ -1,0 +1,24 @@
+<div class="w100 flex">
+    <button mat-flat-button color="primary" class="flex-1" (click)="onBack()">返回</button>
+    <button mat-flat-button color="primary" class="flex-2" (click)="onAddPeople()">添加人员</button>
+</div>
+<div class="line"></div>
+
+<h2 style="margin-left: 10px;">{{hosingName+buildingName+room_number}}</h2>
+
+
+
+<mat-radio-group [(ngModel)]="residence_type" style="margin-bottom: 30px;" (change)="onChange()">
+    <mat-radio-button class="example-radio-button" *ngFor="let type of residence_types" [value]="type">
+        {{type}}
+    </mat-radio-button>
+</mat-radio-group>
+
+<div class="line" style="margin-bottom: 20px;"></div>
+
+<p *ngIf="hidePersons.length>0">{{hidePersonInfo}}</p>
+
+<div style="margin-top: 20px;">
+    <app-room-person *ngFor="let item of showPersons" [person]="item"></app-room-person>
+</div>
+

@@ -1,0 +1,30 @@
+<div class="root">
+    <h1>添加人员</h1>
+    <mat-form-field >
+        <mat-label>人员姓名</mat-label>
+        <input matInput [(ngModel)] = "pName" required>
+    </mat-form-field>
+    <mat-form-field >
+        <mat-label>身份证号</mat-label>
+        <input matInput [(ngModel)] = "pid" required>
+    </mat-form-field>
+    <mat-form-field >
+        <mat-label>电话号码</mat-label>
+        <input matInput [(ngModel)] = "tel" >
+    </mat-form-field>
+
+    <mat-form-field >
+        <mat-label>工作单位</mat-label>
+        <input matInput [(ngModel)] = work_place >
+    </mat-form-field>
+
+    <div>
+        <mat-checkbox [(ngModel)]="is_host">房主</mat-checkbox>
+        <mat-checkbox [(ngModel)]="is_huji">本地户籍</mat-checkbox>
+    </div>
+
+    <div class="btn-container">
+        <button mat-raised-button color="accent" (click)="onCancel()">取消</button>
+        <button mat-raised-button color="primary" (click)="onSubmit()">提交</button>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<!-- 在你的组件模板中 -->
+<div class="person-item" [style.background]="getBgColor()">
+    <div class="info">
+      <!-- 人员信息显示区域 -->
+      <div class="name">{{person?.name}}  {{person.telephone}}</div>
+      <div class="role">{{person.pid}}</div>
+      <div class="department">{{person.work_place}}</div>
+    </div>
+    <div class="actions">
+      <!-- 按钮区域 -->
+      <div>
+        <button (click)="onEditPerson()" class="square-button">编辑</button>
+        <button (click)="onDelPerson()" class="square-button">删除</button>
+      </div>
+      <div>
+        <!-- <button (click)="onSetHomeHost()">房主</button> -->
+      </div>
+      
+    </div>
+  </div>
+  

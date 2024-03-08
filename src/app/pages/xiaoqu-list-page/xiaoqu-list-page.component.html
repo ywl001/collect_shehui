@@ -1,0 +1,7 @@
+<div class="root">
+    <h2 style="margin-left: 20px;">小区列表</h2>
+    <div class="line"></div>
+    <div class="rounded-rectangle" *ngFor="let item of hosings" (click)="onSelectHosing(item)">
+        {{item.hosing_name}}
+    </div>
+</div>

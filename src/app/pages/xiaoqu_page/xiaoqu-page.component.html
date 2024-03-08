@@ -1,0 +1,11 @@
+<div class="root">
+    <div class="w100 flex">
+        <button mat-flat-button color="primary" class="w100" (click)="onBack()">返回</button>
+    </div>
+
+
+    <h2 style="margin-left: 10px;">{{hosingName}}</h2>
+    <div class="line"></div>
+
+    <div *ngFor="let item of buildings" class="hosing" (click)="onSelectBuilding(item)">{{item.building_number}}号楼</div>
+</div>

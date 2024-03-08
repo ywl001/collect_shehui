@@ -30,7 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss",
+              "./node_modules/toastr/build/toastr.css"
             ],
             "scripts": []
           },
@@ -65,7 +67,8 @@
               "buildTarget": "collect_shehui:build:production"
             },
             "development": {
-              "buildTarget": "collect_shehui:build:development"
+              "buildTarget": "collect_shehui:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -90,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -97,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "eb155830-1078-468a-a449-f6c906909be5"
   }
 }
